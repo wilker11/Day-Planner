@@ -5,206 +5,118 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Using Bootstrap for layout -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="https://kit.fontawesome.com/d3bce829f3.js" crossorigin="anonymous"></script>
+
+    
+    <!-- This is the title-->
     <title>Work Day Scheduler</title>
 </head>
 
 <body>
+    <!-- This is the header -->
     <header class="jumbotron">
         <h1 class="display-3">Work Day Scheduler</h1>
-        <p class="lead">This is a calendar app for scheduling your work day</p>
+        <p class="lead">A simple calendar app for scheduling your work day</p>
         <p id="currentDay" class="lead"></p>
     </header>
+    <!-- This is a container-->
     <div class="container">
-        <!-- This is where the 9:am timeblocks will go -->
-        <div class="input-group input-group-lg">
+        <!-- 9AM Timeblocks go here -->
+        <div class="input-group input-group-lg" data-hour="9">
             <div class="input-group-prepend">
                 
-                <span class="input-group-text 9AM" id="inputGroup-sizing-lg">09:00 AM</span>
+                <span class="input-group-text time-block block1"></span>
             </div>
-            <input type="text" class="form-control bg-success" aria-label="Large"
-                aria-describedby="inputGroup-sizing-sm">
-            <input class="btn btn-primary" type="submit" value="Submit">
-           
-        </div>
-        <!-- this is the second part of the 10am timeblocks -->
-        <div class="input-group input-group-lg">
-            <div class="input-group-prepend">
-                <span class="input-group-text 10AM" id="inputGroup-sizing-lg">10:00 AM</span>
-            </div>
-            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-            <input class="btn btn-primary" type="submit" value="Submit">
-           
-        </div>
-        <!-- this is the third part of the 11:am timeblocks -->
-        <div class="input-group input-group-lg">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-lg">11:00 AM</span>
-            </div>
-            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-            <input class="btn btn-primary" type="submit" value="Submit">
+            <input type="text" class="form-control form9" aria-label="Large">
+            <!-- <input class="btn saveBtn" type="submit" value="Save"> -->
+            <button class="btn saveBtn"><i class="far fa-save"></i></button>
             
         </div>
-        <!-- this is the fourth part of the 12:am  timeblocks -->
-        <div class="input-group input-group-lg">
+        <!-- 10AM Timeblocks go here -->
+        <div class="input-group input-group-lg" data-hour="10">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-lg">12:00 PM</span>
+                <span class="input-group-text time-block block2"></span>
             </div>
-            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-            <input class="btn btn-primary" type="submit" value="Submit">
-           
-        </div>
-        <!-- this is the 1pm part of the timeblocks -->
-        <div class="input-group input-group-lg">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-lg">01:00 PM</span>
-            </div>
-            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-            <input class="btn btn-primary" type="submit" value="Submit">
+            <input type="text" class="form-control form10" aria-label="Large">
+            <button class="btn saveBtn"><i class="far fa-save"></i></button>
             
         </div>
-        <!-- the 2pm Timeblocks go here -->
-        <div class="input-group input-group-lg">
+        <!-- 11AM Timeblocks go here -->
+        <div class="input-group input-group-lg" data-hour="11">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-lg">02:00 PM</span>
+                <span class="input-group-text time-block block3"></span>
             </div>
-            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-            <input class="btn btn-primary" type="submit" value="Submit">
+            <input type="text" class="form-control form11" aria-label="Large">
+            <button class="btn saveBtn"><i class="far fa-save"></i></button>
+          
+        </div>
+        <!-- 12PM Timeblocks go here -->
+        <div class="input-group input-group-lg" data-hour="12">
+            <div class="input-group-prepend">
+                <span class="input-group-text time-block block4"></span>
+            </div>
+            <input type="text" class="form-control form12" aria-label="Large">
+            <button class="btn saveBtn"><i class="far fa-save"></i></button>
             
         </div>
-        <!-- The 3pm Timeblocks go here -->
-        <div class="input-group input-group-lg">
+        <!-- 1PM Timeblocks go here -->
+        <div class="input-group input-group-lg" data-hour="1">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-lg">03:00 PM</span>
+                <span class="input-group-text time-block block5"></span>
             </div>
-            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-            <input class="btn btn-primary" type="submit" value="Submit">
-           
-        </div>
-        <!-- The 4pm Timeblocks go here -->
-        <div class="input-group input-group-lg">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-lg">04:00 PM</span>
-            </div>
-            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-            <input class="btn btn-primary" type="submit" value="Submit">
+            <input type="text" class="form-control form1" aria-label="Large">
+            <button class="btn saveBtn"><i class="far fa-save"></i></button>
             
         </div>
-        <!-- The 5pm Timeblocks go here -->
-        <div class="input-group input-group-lg">
+        <!-- 2PM Timeblocks go here -->
+        <div class="input-group input-group-lg" data-hour="2">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-lg">05:00 PM</span>
+                <span class="input-group-text time-block block6"></span>
             </div>
-            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-            <input class="btn btn-primary" type="submit" value="Submit">
+            <input type="text" class="form-control form2" aria-label="Large">
+            <button class="btn saveBtn"><i class="far fa-save"></i></button>
             
         </div>
-
-
+        <!-- 3PM Timeblocks go here -->
+        <div class="input-group input-group-lg" data-hour="3">
+            <div class="input-group-prepend">
+                <span class="input-group-text time-block block7"></span>
+            </div>
+            <input type="text" class="form-control form3" aria-label="Large">
+            <button class="btn saveBtn"><i class="far fa-save"></i></button>
+            
+        </div>
+        <!-- 4PM Timeblocks go here -->
+        <div class="input-group input-group-lg" data-hour="4">
+            <div class="input-group-prepend">
+                <span class="input-group-text time-block block8"></span>
+            </div>
+            <input type="text" class="form-control form4" aria-label="Large">
+            <button class="btn saveBtn"><i class="far fa-save"></i></button>
+          
+        </div>
+        <!-- 5PM Timeblocks go here -->
+        <div class="input-group input-group-lg" data-hour="5">
+            <div class="input-group-prepend">
+                <span class="input-group-text time-block block9"></span>
+            </div>
+            <input type="text" class="form-control form5" aria-label="Large">
+            <button class="btn saveBtn"><i class="far fa-save"></i></button>
+            
+        </div>
     </div>
 
+
+    <!-- These are the Jquery and Moment JS links-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    
-    <script>
-        moment(Date);
-        ;
-        // console.log(moment());
-
-        $("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
-
-
-        // Time comparison format
-        var format = "HA";
-        var time = moment();
-        // console.log(time);
-        var beforeTime = moment(19, format);
-        var afterTime = moment(21, format);
-
-
-        function compareInput() {
-
-            
-            var currentTime = moment().format('h:mm a');
-            // console.log(currentTime);
-
-            var test1 = $(".9AM").text();
-
-            // console.log(test1);
-
-
-            if (moment(test1).isBefore(currentTime)) {
-                console.log(yes);
-            }
-            // moment('2010-10-20').isAfter('2010-10-19'); // true
-            // momentObj.isBefore();
-            // bg-danger
-            // bg-secondary
-
-            // Condition: 
-            // if time is before current time. Set class to bg-danger 
-            // else if time is after current time. Set class to success 
-            // Separate variable for each time 
-
-
-
-        }
-
-        compareInput();
-
-        // moment().subtract(10, 'days').calendar(); // 10/12/2019
-        // moment().subtract(6, 'days').calendar();  // Last Wednesday at 7:07 PM
-        // moment().subtract(3, 'days').calendar();  // Last Saturday at 7:07 PM
-        // moment().subtract(1, 'days').calendar();  // Yesterday at 7:07 PM
-        // moment().calendar();                      // Today at 7:07 PM
-        // moment().add(1, 'days').calendar();       // Tomorrow at 7:07 PM
-        // moment().add(3, 'days').calendar();       // Friday at 7:07 PM
-        // moment().add(10, 'days').calendar();      // 11/01/2019
-
-        // console.log(moment().subtract(10, 'days').calendar(), // 10/12/2019
-        //     moment().subtract(6, 'days').calendar(),  // Last Wednesday at 7:07 PM
-        //     moment().subtract(3, 'days').calendar(),  // Last Saturday at 7:07 PM
-        //     moment().subtract(1, 'days').calendar(),  // Yesterday at 7:07 PM
-        //     moment().calendar(),                // Today at 7:07 PM
-        //     moment().add(1, 'days').calendar(),     // Tomorrow at 7:07 PM
-        //     moment().add(3, 'days').calendar(),       // Friday at 7:07 PM
-        //     moment().add(10, 'days').calendar());
-
-        // moment().calendar(null, {
-        //     sameDay: '[Today]',
-        //     nextDay: '[Tomorrow]',
-        //     nextWeek: 'dddd',
-        //     lastDay: '[Yesterday]',
-        //     lastWeek: '[Last] dddd',
-        //     sameElse: 'DD/MM/YYYY'
-        // });
-
-        // console.log(moment().calendar(null, {
-        //     sameDay: '[Today]',
-        //     nextDay: '[Tomorrow]',
-        //     nextWeek: 'dddd',
-        //     lastDay: '[Yesterday]',
-        //     lastWeek: '[Last] dddd',
-        //     sameElse: 'DD/MM/YYYY'
-        // }))
-
-               // //  var row = $("<tr>");
-        // // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
-        // var nameTd = $("<td>").text(response.Title);
-        // var yearTd = $("<td>").text(response.Year);
-        // var actorsTd = $("<td>").text(response.Actors);
-        // // Append the td elements to the new table row
-        // row.append(nameTd, yearTd, actorsTd);
-        // // Append the table row to the tbody element
-        // $("tbody").append(row);
-
-
-
-    </script>
+    <script src="script.js"></script>
 </body>
 
-</html> 
+</html>
