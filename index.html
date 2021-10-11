@@ -118,8 +118,17 @@
         $("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
 
 
+        // Time comparison format
+        var format = "HA";
+        var time = moment();
+        // console.log(time);
+        var beforeTime = moment(19, format);
+        var afterTime = moment(21, format);
+
+
         function compareInput() {
 
+            
             var currentTime = moment().format('h:mm a');
             // console.log(currentTime);
 

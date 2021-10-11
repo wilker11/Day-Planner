@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header class="jumbotron">
+        <h1 class="display-3">Work Day Scheduler</h1>
+        <p class="lead">A simple calendar app for scheduling your work day</p>
+        <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container">
+        <!-- Timeblocks go here -->
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <!-- Testing -->
+
+                <!-- Added time-block class -->
+                <span class="input-group-text time-block" id="inputGroup-sizing-lg"></span>
+            </div>
+            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <input class="btn saveBtn" type="submit" value="Save">
+            <!-- Use Favacon for save icon-->
+        </div>
+        <!-- Timeblocks go here -->
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">10:00 AM</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <input class="btn saveBtn" type="submit" value="Save">
+            <!-- Use Favacon for save icon-->
+        </div>
+        <!-- Timeblocks go here -->
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">11:00 AM</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <input class="btn saveBtn" type="submit" value="Save">
+            <!-- Use Favacon for save icon-->
+        </div>
+        <!-- Timeblocks go here -->
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">12:00 PM</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <input class="btn saveBtn" type="submit" value="Save">
+            <!-- Use Favacon for save icon-->
+        </div>
+        <!-- Timeblocks go here -->
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">01:00 PM</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <input class="btn saveBtn" type="submit" value="Save">
+            <!-- Use Favacon for save icon-->
+        </div>
+        <!-- Timeblocks go here -->
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">02:00 PM</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <input class="btn saveBtn" type="submit" value="Save">
+            <!-- Use Favacon for save icon-->
+        </div>
+        <!-- Timeblocks go here -->
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">03:00 PM</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <input class="btn saveBtn" type="submit" value="Save">
+            <!-- Use Favacon for save icon-->
+        </div>
+        <!-- Timeblocks go here -->
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">04:00 PM</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <input class="btn saveBtn" type="submit" value="Save">
+            <!-- Use Favacon for save icon-->
+        </div>
+        <!-- Timeblocks go here -->
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">05:00 PM</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <input class="btn saveBtn" type="submit" value="Save">
+            <!-- Use Favacon for save icon-->
+
+
+        </div>
+    </div>
+    <!-- Test Scroll-->
+    <!-- <div id="other"></div> -->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script>
+        // Psuedo code
+        // Find out of Moment.js needs further installation
+        // Start with Document onload?
+        // Look up Javscript Calendar, write steps down and find matching Jquery methods?
+        // Variables unknown until step above is complete
+
+        // Needs start time
+        // Needs end time
+        // Needs current time  
+        // Needs to compare each hour to current time, and determine if it is 
+        // Current time is always going to be more than start time
+        // Current time is always going to be less than end time
+        // Difference between the two
+        // For loop for starting time, it would only be able to loop up to the ending time, then what?
+
+
+        // Test: 
+        // Top date, works
+        moment(Date);
+        $("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
+
+        // Time comparison format
+        var format = "HA";
+        var time = moment();
+        // console.log(time);
+        var beforeTime = moment(19, format);
+        var afterTime = moment(21, format);
+
+        console.log(time, beforeTime, afterTime.format('hh:mm A'));
+
+        // if time is greater than beforetime but can't do if time is greater than beforetime.format
+        // .format is a string parse
+        // var currentTime = moment().format('h:mm A');
+        // var format = 'h:mm A';
+        // console.log(currentTime);
+
+        var hours = 9
+        var test1 = moment.utc(hours * 3600 * 1000).format('HH:mm A');
+        // var test2 = moment.utc(hours * 2000 * 1000).format('HH:mm A');
+
+        // Populates time formula into html
+        $(".time-block").text(test1);
+
+        if (time < beforeTime) {
+            console.log("yes");
+        } else if (time > afterTime) {
+            console.log("no");
+        } else {
+            console.log("Same time");
+        };
+
+// For dates
+// isSame();
+// isBefore();
+// isAfter();
+        // for (var i = 0; i < test1; i++) {
+        //     // $(".time-block").text(test1);
+        //     console.log(test1);
+
+        // }
+
+        // if (moment(test1).isBefore(currentTime)) {
+        //     console.log(yes);
+        // };
+
+        // Condition: 
+        // if time is before current time. Set class to bg-danger 
+        // else if time is after current time. Set class to success 
+        // Separate variable for each time 
+
+        // function compareInput() {
+        //     // test1 = moment.utc(hours * 3600 * 1000).format('h:mm A');
+        //     console.log(test1);
+
+        //     if (moment(test1).isBefore(currentTime)) {
+        //         console.log("yes");
+        //     } else {
+        //         console.log("no");
+        //     }
+
+        // };
+
+        // compareInput();
+
+        // Test Scroll - does not work
+        // $("#other").click(function () {
+        //     $(".container").scroll();
+        // });
+
+        // Attribute changes - works: 
+        // $(".form-control").addClass("past");
+        // $(".form-control").addClass("present");
+        // $(".form-control").addClass("future");
+
+        // Test local storage
+        // Set storage
+
+
+
+        // $("btn").click(function () {
+        //     var inputValue = $(".btn").val();
+        //     console.log(inputValue);
+        //     storage.setItem(inputName, inputValue);
+        // });
+
+        //   function populateStorage() {
+        //   localStorage.setItem('bgcolor', 'red');
+        //   localStorage.setItem('font', 'Helvetica');
+        //   localStorage.setItem('image', 'myCat.png');
+        // }
+
+        // var aValue = storage.getItem(inputName);
+
+// Store
+// localStorage.setItem("lastname", "Smith");
+// // Retrieve
+// document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+
+    </script>
+</body>
+
+</html> 
